@@ -1,0 +1,6 @@
+{
+	"parent":"item/generated",
+	"textures": {
+		"layer0":"moonlit:items/remedium_lava_bucket"
+	}
+}

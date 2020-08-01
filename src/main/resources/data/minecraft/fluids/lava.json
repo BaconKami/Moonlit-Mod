@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lava",
+    "minecraft:flowing_lava",
+    "moonlit:remedium_lava",
+    "moonlit:flowing_remedium_lava"
+  ]
+}

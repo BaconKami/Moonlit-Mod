@@ -1,0 +1,39 @@
+modLoader="javafml"                     #mandatory
+loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+issueTrackerURL="http://my.issue.tracker/"#optional
+[[mods]] 							    #mandatory
+
+modId="moonlit"	 				        #mandatory
+version="1.15.2-1.0.0" 				    #mandatory
+displayName="The Moonlit Mod" 		    #mandatory
+
+updateJSONURL="http://myurl.me/" 	    #optional
+displayURL="https://discord.gg/z5cuuM"  #optional
+logoFile="examplemod.png" 			    #optional to update later
+credits="Thanks to MultiverseQueen's Team"#optional
+authors="MultiverseQueen"               #optional
+description='''
+This is a Songs of War inspired mod. The main feature and attraction of this mod is the addition of Moonlits, the Magnorite equivalent of werewolves.
+These beasts aren't all hostile, however. Actually, most are neutral. Will you hunt them? Will you try to befriend them? Become one?
+That's completely up to you! There's BIG focus on relationships, reputation, impact, consequence, and balance in the playstyles.
+Yes, you can change your path in the game, but it will probably be hard.
+'''
+
+[[dependencies.moonlit]] 		        #optional
+    # the modid of the dependency
+    modId="forge"                       #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true                      #mandatory
+    # The version range of the dependency
+    versionRange="[31,)"                #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+
+[[dependencies.moonlit]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
