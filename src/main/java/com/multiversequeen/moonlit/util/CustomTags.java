@@ -10,7 +10,7 @@ import net.minecraftforge.common.Tags;
 
 import javax.annotation.Resource;
 
-public class CustomTags extends Tags
+public class CustomTags
 {
     public static class Fluids
     {

@@ -97,7 +97,7 @@ public abstract class RemediumLavaFluid extends FlowingFluid
     @Nullable
     @OnlyIn(Dist.CLIENT)
     public IParticleData getDripParticleData() {
-        return ParticleTypes.DRIPPING_LAVA;
+        return CustomParticleTypes.DRIPPING_REMEDIUM_LAVA.get();
     }
 
     @Override
