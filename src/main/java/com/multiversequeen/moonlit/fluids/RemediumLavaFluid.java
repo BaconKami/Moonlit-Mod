@@ -26,27 +26,27 @@ import net.minecraftforge.fluids.FluidAttributes;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public abstract class RemediumLavaFluid extends FlowingFluid
-{
+public abstract class RemediumLavaFluid extends FlowingFluid {
     private static final ResourceLocation STILL_RL = new ResourceLocation(Moonlit.MOD_ID, "blocks/remedium_lava_still");
     private static final ResourceLocation FLOW_RL = new ResourceLocation(Moonlit.MOD_ID, "blocks/remedium_lava_flow");
 
-    public Fluid getFlowingFluid()
-    {
+    public Fluid getFlowingFluid() {
         return CustomFluids.FLOWING_REMEDIUM_LAVA.get();
     }
 
-    public Fluid getStillFluid()
-    {
+    public Fluid getStillFluid() {
         return CustomFluids.REMEDIUM_LAVA.get();
     }
 
-    public Item getFilledBucket() { return CustomItems.REMEDIUM_LAVA_BUCKET.get(); }
+    public Item getFilledBucket() {
+        return CustomItems.REMEDIUM_LAVA_BUCKET.get();
+    }
 
     @OnlyIn(Dist.CLIENT)
     public void animateTick(World worldIn, BlockPos pos, IFluidState state, Random random) {
-    spawnSmokeParticles(worldIn, pos, random);
+        spawnSmokeParticles(worldIn, pos, random);
         BlockPos blockpos = pos.up();
+
         if (worldIn.getBlockState(blockpos).isAir() && !worldIn.getBlockState(blockpos).isOpaqueCube(worldIn, blockpos)) {
             if (random.nextInt(100) == 0) {
                 double d0 = (double)((float)pos.getX() + random.nextFloat());
@@ -62,8 +62,7 @@ public abstract class RemediumLavaFluid extends FlowingFluid
 
     }
 
-    public static void spawnSmokeParticles(World worldIn, BlockPos pos, Random random)
-    {
+    public static void spawnSmokeParticles(World worldIn, BlockPos pos, Random random) {
         worldIn.addParticle(CustomParticleTypes.REMEDIUM_LAVA_SMOKE.get(), (double)pos.getX() + 0.25D + random.nextDouble() / 2.0D * (double)(random.nextBoolean() ? 1 : -1),
                 (double)pos.getY() + 0.4D, (double)pos.getZ() + 0.25D + random.nextDouble() / 2.0D * (double)(random.nextBoolean() ? 1 : -1),
                 0.0D, 0.005D, 0.0D);

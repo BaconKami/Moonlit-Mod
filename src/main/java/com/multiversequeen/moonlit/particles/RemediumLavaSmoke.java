@@ -7,10 +7,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class RemediumLavaSmoke extends SpriteTexturedParticle
-{
-    protected RemediumLavaSmoke(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn, double ySpeedIn, double zSpeedIn)
-    {
+public class RemediumLavaSmoke extends SpriteTexturedParticle {
+    protected RemediumLavaSmoke(World worldIn, double xCoordIn, double yCoordIn, double zCoordIn, double xSpeedIn, double ySpeedIn, double zSpeedIn) {
         super(worldIn, xCoordIn, yCoordIn, zCoordIn, xSpeedIn, ySpeedIn, zSpeedIn);
 
         float f = this.rand.nextFloat() * 1.0F;
@@ -27,23 +25,19 @@ public class RemediumLavaSmoke extends SpriteTexturedParticle
     }
 
     @Override
-    public IParticleRenderType getRenderType()
-    {
+    public IParticleRenderType getRenderType() {
         return IParticleRenderType.PARTICLE_SHEET_OPAQUE;
     }
 
     @Override
-    public void tick()
-    {
+    public void tick() {
         this.prevPosX = this.posX;
         this.prevPosY = this.posY;
         this.prevPosZ = this.posZ;
-        if (this.maxAge-- <= 0)
-        {
+
+        if (this.maxAge-- <= 0) {
             this.setExpired();
-        }
-        else
-        {
+        } else {
             this.move (this.motionX, this.motionY, this.motionZ);
             this.motionX *= 1.0D;
             this.motionY *= 1.0D;
@@ -52,18 +46,15 @@ public class RemediumLavaSmoke extends SpriteTexturedParticle
     }
 
     @OnlyIn(Dist.CLIENT)
-    public static class Factory implements IParticleFactory<BasicParticleType>
-    {
+    public static class Factory implements IParticleFactory<BasicParticleType> {
         private final IAnimatedSprite spriteSet;
 
-        public Factory(IAnimatedSprite sprite)
-        {
+        public Factory(IAnimatedSprite sprite) {
             this.spriteSet = sprite;
         }
 
         @Override
-        public Particle makeParticle(BasicParticleType typeIn, World worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed)
-        {
+        public Particle makeParticle(BasicParticleType typeIn, World worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
             RemediumLavaSmoke particle = new RemediumLavaSmoke(worldIn, x, y, z, xSpeed, ySpeed, zSpeed);
             particle.setColor(1.0F, 1.0F, 1.0F);
             particle.selectSpriteRandomly(this.spriteSet);

@@ -10,12 +10,10 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class CustomBlocks
-{
+public class CustomBlocks {
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, Moonlit.MOD_ID);
 
-    public static final RegistryObject<Block> REMEDIUM_LAVA = register("remedium_lava", new FlowingFluidBlock(() -> CustomFluids.REMEDIUM_LAVA.get(),
-            Block.Properties.create(Material.LAVA).doesNotBlockMovement().noDrops().lightValue(10).tickRandomly().hardnessAndResistance(100.0F)));
+    public static final RegistryObject<Block> REMEDIUM_LAVA = register("remedium_lava", new FlowingFluidBlock(() -> CustomFluids.REMEDIUM_LAVA.get(), Block.Properties.create(Material.LAVA).doesNotBlockMovement().noDrops().lightValue(10).tickRandomly().hardnessAndResistance(100.0F)));
 
 
     private static RegistryObject<Block> register(String key, Block block)

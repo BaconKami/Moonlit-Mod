@@ -10,14 +10,11 @@ import net.minecraftforge.common.Tags;
 
 import javax.annotation.Resource;
 
-public class CustomTags
-{
-    public static class Fluids
-    {
+public class CustomTags {
+    public static class Fluids {
         public static final Tag<Fluid> REMEDIUM_LAVA = tag("remedium_lava");
 
-        public static Tag<Fluid> tag(String name)
-        {
+        public static Tag<Fluid> tag(String name) {
             return new FluidTags.Wrapper(new ResourceLocation(Moonlit.MOD_ID, name));
         }
     }
