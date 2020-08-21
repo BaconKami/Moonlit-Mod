@@ -1,0 +1,95 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"tail_wagging": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"Tail1": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 25, 0]
+						},
+						"1.0": {
+							"vector": [0, -25, 0]
+						},
+						"2.0": {
+							"vector": [0, 25, 0]
+						}
+					}
+				},
+				"Tail2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 25, 0]
+						},
+						"1.0": {
+							"vector": [0, -25, 0]
+						},
+						"2.0": {
+							"vector": [0, 25, 0]
+						}
+					}
+				},
+				"Tail3": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 25, 0]
+						},
+						"1.0": {
+							"vector": [0, -25, 0]
+						},
+						"2.0": {
+							"vector": [0, 25, 0]
+						}
+					}
+				}
+			}
+		},
+		"eating": {
+			"animation_length": 4.64,
+			"bones": {
+				"Neck": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.52": {
+							"vector": [-60, 0, 0]
+						},
+						"3.28": {
+							"vector": [-60, 0, 0]
+						},
+						"4.64": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"jaw": {
+					"rotation": {
+						"1.52": {
+							"vector": [0, 0, 0]
+						},
+						"1.96": {
+							"vector": [-20, 0, 0]
+						},
+						"2.4": {
+							"vector": [0, 0, 0]
+						},
+						"2.84": {
+							"vector": [-20, 0, 0]
+						},
+						"3.28": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": ""
+				}
+			}
+		}
+	}
+}
